@@ -26,11 +26,15 @@ The project began with scientific figure-production rules and is designed to gro
 
 ## Install
 
-Download or clone this directory, then install the folder containing `SKILL.md` in an AI product that supports custom Agent Skills. Follow that product's own skill-import instructions. If it accepts only a single instruction file, provide `SKILL.md`; this will not automatically include the machine-readable rules or extended documentation.
+Download the [nature_experience directory](https://github.com/869564628/zsc/tree/main/nature_experience), or download the full repository ZIP and extract this folder. Import the folder containing `SKILL.md` into an AI product that supports custom Agent Skills. Follow that product's own skill-import instructions. If it accepts only a single instruction file, provide `SKILL.md`; this will not automatically include the machine-readable rules or extended documentation.
+
+## Download a packaged release
+
+The GitHub Actions workflow packages the folder as `experience-VERSION.zip` whenever this directory changes. Open the repository's [Actions page](https://github.com/869564628/zsc/actions/workflows/package-experience.yml), choose the latest successful **Package experience skill** run, and download its artifact. Artifacts are retained for 90 days.
 
 ## Update
 
-The canonical source is this GitHub directory. To update an installed copy, download the latest version or pull the repository and re-import/refresh the skill in the target AI. GitHub changes do not automatically propagate to an already installed local copy unless the target platform supports remote updates.
+The canonical source is this GitHub directory. After a new change, download the latest artifact or pull the repository and re-import/refresh the skill in the target AI. GitHub changes do not automatically propagate to an already installed local copy unless the target platform supports remote updates.
 
 ## Versioning
 
