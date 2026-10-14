@@ -1,4 +1,4 @@
-version: "1.0.0"
+version: "1.1.0"
 
 export:
   formats: ["png", "svg", "pdf"]
@@ -10,10 +10,13 @@ typography:
   italicize:
     - gene_symbols
     - latin_species_names
+  do_not_automatically_italicize:
+    - protein_names
 
 axes:
   gridlines: false
   spine_width_pt: 1.5
+  optional_stronger_spine_width_pt: 2.0
   equal_spine_width: true
   max_major_ticks: 6
 
@@ -24,12 +27,21 @@ statistics:
     "**": 0.01
     "***": 0.001
     "****": 0.0001
+  note: "State the convention in the figure caption; use exact P values when more informative or required."
 
 color_policy:
   same_group_same_color: true
   manuscript_palette_is_global: true
-  example:
-    kunming_group: "sky_blue"
+  do_not_reassign_existing_group_colors: true
+  population_palette:
+    KM: "#C4A3F6"
+    MY: "#88D1E6"
+    WH: "#DB9971"
+    HF: "#66C2A5"
+    WX: "#FFCD8A"
+    PDS: "#E79FB3"
+    QD: "#ADCF60"
+    TJ: "#6FA8FF"
 
 privacy:
   anonymize_sample_names_when_requested: true
@@ -41,3 +53,4 @@ design:
   avoid_decorative_effects: true
   consistent_panel_alignment: true
   consistent_visual_encoding: true
+  prefer_reproducible_scripts: true
