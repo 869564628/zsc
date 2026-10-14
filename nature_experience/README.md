@@ -1,36 +1,37 @@
-# Nature Experience
+# experience
 
-This folder stores the persistent scientific figure-production and research-workflow rules used across the user's manuscripts.
+**experience** is a portable AI skill for applying and maintaining a consistent set of scientific research standards. It is developed in this directory and is intended for AI tools that support the Agent Skills format.
 
-The main specification is [SKILL.md](SKILL.md). Machine-readable defaults are in [rules.yaml](rules.yaml).
+The project began with scientific figure-production rules and is designed to grow into a structured, versioned library for figure QA, bioinformatics workflows, statistical interpretation, microbiome/genomics analyses, and manuscript writing. It is not tied to one manuscript or one AI vendor.
 
-The intent is to keep the user's research standards consistent across projects rather than tying them to a single manuscript.
+## Files
+
+- `SKILL.md` — portable skill entry point; the skill name is exactly `experience`.
+- `rules.yaml` — machine-readable defaults for figures, typography, statistical annotations, group colors, privacy, and design.
+- `Experience.md` — expanded human-readable research and figure standards.
+- `VERSION` — current release version.
+- `CHANGELOG.md` — release history.
+- `INSTALL.md` — installation and update notes.
 
 ## Current figure defaults
 
-- Arial, 12 pt
-- Transparent background
-- PNG + SVG + PDF
-- No grid lines
-- Four equal-width borders, default 1.5 pt
-- Maximum 5–6 major axis ticks where practical
-- Significance shown with asterisks
-- Same biological group = same color across the manuscript
-- Gene symbols and Latin species names italicized
-- Publication-safe sample/group naming
+- Arial, 12 pt; italicize gene symbols and Latin binomials.
+- Transparent background; export PNG + SVG + PDF.
+- No gridlines by default.
+- Four equal-width plot borders, 1.5 pt by default.
+- About 5–6 or fewer major tick labels per axis where practical.
+- Significance asterisks by default, with the convention stated in the caption.
+- Reuse the same color for the same biological group across a manuscript.
+- Keep figures reproducible, uncluttered, and safe for publication.
 
-## Future extensions
+## Install
 
-Potential additions include:
-- manuscript-specific color palettes
-- standard dimensions for single/double-column figures
-- standard panel labels
-- line widths and point sizes
-- heatmap conventions
-- PCA/PCoA conventions
-- GWAS/selection-scan conventions
-- microbiome plotting conventions
-- gene-expression/up/down regulation conventions
-- statistical-analysis standards
-- automated figure QA checks
-- reusable R/Python plotting templates
+Download or clone this directory, then install the folder containing `SKILL.md` in an AI product that supports custom Agent Skills. Follow that product's own skill-import instructions. If it accepts only a single instruction file, provide `SKILL.md`; this will not automatically include the machine-readable rules or extended documentation.
+
+## Update
+
+The canonical source is this GitHub directory. To update an installed copy, download the latest version or pull the repository and re-import/refresh the skill in the target AI. GitHub changes do not automatically propagate to an already installed local copy unless the target platform supports remote updates.
+
+## Versioning
+
+Meaningful changes should update `VERSION` and `CHANGELOG.md`. Keep general standards separate from manuscript-specific exceptions. Do not add an unverified preference or a one-off workaround as a permanent rule without confirmation.
