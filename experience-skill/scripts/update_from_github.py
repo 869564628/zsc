@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FILES = {
     "SKILL.md": "experience-skill/SKILL.md",
     "README.md": "experience-skill/README.md",
+    "INSTALL-zh.md": "experience-skill/INSTALL-zh.md",
     "VERSION": "experience-skill/VERSION",
     "CHANGELOG.md": "experience-skill/CHANGELOG.md",
     "references/record-templates.md": "experience-skill/references/record-templates.md",
